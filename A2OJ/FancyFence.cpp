@@ -11,6 +11,11 @@ using namespace std;
 
 void solve() {
 
+  int t; cin >> t;
+  while(t--) {
+    int theta; cin >> theta;
+    cout << ((360 % (180 - theta) == 0)? "YES" : "NO") << endL;
+  }
   
 
 }
