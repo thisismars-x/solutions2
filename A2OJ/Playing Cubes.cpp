@@ -12,7 +12,9 @@ using namespace std;
 
 void solve() {
 
-  
+  int n, m; cin >> n >> m;  
+  int p = min(n, m);
+  cout << n + m - p - 1 <<  " " << p << '\n';
 
 }
 

@@ -12,7 +12,16 @@ using namespace std;
 
 void solve() {
 
-  
+  int n; cin >> n;
+  vector<int> nn(n);
+  for(int i = 0; i < n; i++) cin >> nn[i];
+  sort(all(nn));
+  int ans = 1;
+  for(int i = 0; i < n; i++) {
+    if(nn[i] != ans) break;
+    ans++;
+  }
+  cout << ans << endL;
 
 }
 
@@ -22,4 +31,5 @@ int main() {
 
   solve();
 }
+
 

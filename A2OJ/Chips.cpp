@@ -12,7 +12,17 @@ using namespace std;
 
 void solve() {
 
-  
+  int n, m; cin >> n >> m;
+  int i = 0;
+  while(true) {
+    i %= n;
+    i += 1;
+    if(m < i) {
+      cout << m << endL;
+      return;
+    }
+    m -= i;
+  }
 
 }
 
@@ -22,4 +32,5 @@ int main() {
 
   solve();
 }
+
 

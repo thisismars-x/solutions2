@@ -1,5 +1,6 @@
 #include <ios>
 #include <iostream>
+#include <utility>
 #include <vector>
 #include <algorithm>
 #include <cstring>
@@ -12,7 +13,17 @@ using namespace std;
 
 void solve() {
 
-  
+  int n; cin >> n;
+  vector<int> nn(n);
+  for(int i = 0; i < n; i++) cin >> nn[i];
+  int ans = 0, d = 0;
+  for(int i = 0; i < n; i++) {
+    if(nn[(i + 1) % n] < nn[i]) d++;
+    else if(d != 0 and nn[(i + 1) % n] >= nn[i]) ans++;
+  }
+  if(d>=2) cout << -1;
+  else cout << ans;
+  cout << endL;
 
 }
 
@@ -22,4 +33,5 @@ int main() {
 
   solve();
 }
+
 

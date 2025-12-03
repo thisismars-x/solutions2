@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Check if file.cpp exists
+if [[ ! -f "file.cpp" ]]; then
+    echo "Error: file.cpp not found!"
+    exit 1
+fi
+
+# Compile with warnings and optimizations
+echo "Compiling file.cpp..."
+if ! g++ file.cpp -std=c++23 -Wall -Wextra -Wpedantic -O2 -o a.out; then
+    echo "Compilation failed! Cannot run program."
+    exit 1
+fi
+
+# Run the program and measure time
+echo "Running ./a.out..."
+echo "------------------"
+echo ""
+time ./a.out
+
+# Clean up
+rm -f ./a.out
+echo ""
+echo "------------------"
+echo "Done."
